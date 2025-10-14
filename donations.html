@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organ Donation | Svāsthya Hospital Service</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        .donation-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            min-height: 60vh;
+        }
+
+        .option-buttons {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .option-buttons h2 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .option-btn {
+            background: var(--primary-light);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+
+        .option-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .form-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            display: none;
+        }
+
+        .form-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-light);
+        }
+
+        .submit-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #c0392b;
+        }
+
+        .results {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .results h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .results ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .results li {
+            padding: 0.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .results li:last-child {
+            border-bottom: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .option-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+     <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">
+                <span>Svāsthya</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+               
+                <li><a href="hospital.html">Hospitals</a></li>
+                <li><a href="healthinfo.html">Health Info</a></li>
+                <li><a href="donations.html">Donation</a></li>
+            </ul>
+
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="donation-container">
+        <div class="option-buttons">
+            <h2>Organ Donation & Search</h2>
+            <div class="btn-group">
+                <button class="option-btn" onclick="showSection('donation-form')">Organ Donation</button>
+                <button class="option-btn" onclick="showSection('search-form')">Organ Search</button>
+            </div>
+        </div>
+
+        <!-- Donation Registration Form -->
+        <div id="donation-form" class="form-section">
+            <h3>Organ Donation Registration</h3>
+            <form id="donationForm">
+                <div class="form-group">
+                    <label>Full Name:</label>
+                    <input type="text" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Date of Birth:</label>
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number:</label>
+                    <input type="tel" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Address:</label>
+                    <input type="text" placeholder="Enter your complete address" required>
+                </div>
+                <div class="form-group">
+                    <label>Organ(s) you wish to donate:</label>
+                    <select multiple>
+                        <option value="heart">Heart</option>
+                        <option value="kidney">Kidney</option>
+                        <option value="liver">Liver</option>
+                        <option value="lungs">Lungs</option>
+                        <option value="pancreas">Pancreas</option>
+                        <option value="eyes">Eyes</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Register as Donor</button>
+            </form>
+        </div>
+
+        <!-- Organ Searching Form -->
+        <div id="search-form" class="form-section">
+            <h3>Search for Available Organs</h3>
+            <form id="searchForm">
+                <div class="form-group">
+                    <label>Select Your Location:</label>
+                    <select id="city-select" required>
+                        <option value="">-- Select Your Location --</option>
+                        <option value="Vijayawada">Vijayawada</option>
+                        <option value="Guntur">Guntur</option>
+                        <option value="Ongole">Ongole</option>
+                        <option value="Kadapa">Kadapa</option>
+                        <option value="Tirupati">Tirupati</option>
+                        <option value="Vizag">Vizag</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Select Organ Needed:</label>
+                    <select id="organ-select" required>
+                        <option value="">-- Select Organ --</option>
+                        <option value="heart">Heart</option>
+                        <option value="kidney">Kidney</option>
+                        <option value="liver">Liver</option>
+                        <option value="lungs">Lungs</option>
+                        <option value="pancreas">Pancreas</option>
+                        <option value="eyes">Eyes</option>
+                    </select>
+                </div>
+                <button type="button" class="submit-btn" onclick="searchOrgans()">Search Availability</button>
+            </form>
+            <div id="search-results" class="results"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Svāsthya Hospital Service. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.form-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Scroll to section
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function searchOrgans() {
+            const city = document.getElementById('city-select').value;
+            const organ = document.getElementById('organ-select').value;
+            const resultsDiv = document.getElementById('search-results');
+
+            if (!city || !organ) {
+                resultsDiv.innerHTML = '<p style="color: red;">Please select both location and organ.</p>';
+                resultsDiv.style.display = 'block';
+                return;
+            }
+
+            const hospitals = {
+                Vijayawada: {
+                    heart: ["City Heart Center", "Vijayawada Cardiac Care"],
+                    kidney: ["Vijayawada Nephrology Institute", "Kidney Care Specialists"]
+                },
+                Guntur: {
+                    heart: ["Guntur Heart Hospital", "Cardiac Care Guntur"],
+                    kidney: ["Guntur Kidney Center", "Renal Care Guntur"]
+                },
+                // Add other cities similarly...
+            };
+
+            if (hospitals[city] && hospitals[city][organ]) {
+                resultsDiv.innerHTML = `
+                    <h3>Available in ${city} for ${organ}:</h3>
+                    <ul>
+                        ${hospitals[city][organ].map(hospital => `<li>${hospital}</li>`).join('')}
+                    </ul>
+                    <p>Contact: +91-XXX-XXX-XXXX for more information</p>
+                `;
+            } else {
+                resultsDiv.innerHTML = '<p style="color: red;">No availability found for the selected criteria.</p>';
+            }
+            
+            resultsDiv.style.display = 'block';
+        }
+
+        // Form submission handling
+        document.getElementById('donationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your noble decision to become an organ donor! We will contact you soon.');
+            this.reset();
+        });
+    </script>
+    <script src="nav.js"></script>
+</body>
+</html>

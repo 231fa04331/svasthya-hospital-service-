@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Svāsthya Hospital Service</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        .about-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .about-hero {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            margin-bottom: 3rem;
+            border-left: 5px solid var(--primary-light);
+            border-right: 5px solid var(--primary-light);
+        }
+
+        .about-hero p {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+            line-height: 1.6;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .mission-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .mission-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .scroll-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+     <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">
+                <span>Svāsthya</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+               
+                <li><a href="hospital.html">Hospitals</a></li>
+                <li><a href="healthinfo.html">Health Info</a></li>
+                <li><a href="donations.html">Donation</a></li>
+            </ul>
+
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="about-container">
+        <section class="about-hero">
+            <p>"The best hospitals combine cutting-edge technology with compassionate care and a commitment to excellence."</p>
+        </section>
+
+        <div class="mission-grid">
+            <div class="mission-card">
+                <h3>Our Mission</h3>
+                <p>To provide a comprehensive directory of top-rated doctors and hospitals, empowering patients to make informed decisions about their healthcare.</p>
+            </div>
+            <div class="mission-card">
+                <h3>Our Vision</h3>
+                <p>To become the most trusted healthcare platform connecting patients with the best medical professionals across India.</p>
+            </div>
+            <div class="mission-card">
+                <h3>Our Values</h3>
+                <p>Compassion, Excellence, Innovation, Trust, and Accessibility in healthcare for all.</p>
+            </div>
+        </div>
+
+        <section class="stats-section">
+            <h2>Our Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Hospitals</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Doctors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">Patients Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Cities</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-container">
+            <h2>How It Works</h2>
+            <p>Our website allows patients to search for top-rated doctors and hospitals in their area. Patients can filter search results by specialty, location, and more.</p>
+            <p>Patients can also read reviews from other patients and view detailed profiles of each hospital and doctor.</p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Svāsthya Hospital Service. All rights reserved.</p>
+    </footer>
+
+    <script src="nav.js"></script>
+</body>
+</html>

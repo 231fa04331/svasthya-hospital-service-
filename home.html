@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svāsthya Hospital Service</title>
+    <link rel="stylesheet" href="nav.css"> <!-- Link to the new nav CSS -->
+    <style>
+        /* Reset and base styles are now in nav.css */
+
+        /* Hero Section Styling */
+        .hero-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            min-height: 60vh;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Features Grid */
+        .features {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">
+                <span>Svāsthya</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+               
+                <li><a href="hospital.html">Hospitals</a></li>
+                <li><a href="healthinfo.html">Health Info</a></li>
+                <li><a href="donations.html">Donation</a></li>
+            </ul>
+
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1>Welcome to Svāsthya Hospital Service</h1>
+            <p>Your trusted partner in healthcare. Find the best doctors, hospitals, and medical care tailored to your needs.</p>
+            <button class="cta-button" onclick="location.href='hospital.html'">Find a Doctor</button>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🏥</div>
+            <h3>Find Hospitals</h3>
+            <p>Discover the best healthcare facilities near you with detailed information and services.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">👨‍⚕️</div>
+            <h3>Expert Doctors</h3>
+            <p>Connect with specialized doctors across various medical disciplines and expertise.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💊</div>
+            <h3>Health Information</h3>
+            <p>Access reliable health information and preventive care guidelines.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Svāsthya Hospital Service. All rights reserved.</p>
+    </footer>
+
+    <script src="nav.js"></script>
+</body>
+</html>

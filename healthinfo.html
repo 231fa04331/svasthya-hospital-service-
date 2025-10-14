@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Information | Svāsthya Hospital Service</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        .health-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .health-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .health-section:hover {
+            transform: translateY(-2px);
+        }
+
+        .health-section h2 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--primary-light);
+            padding-bottom: 0.5rem;
+        }
+
+        .health-section p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .health-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .health-section li {
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary-light);
+            border-radius: 4px;
+        }
+
+        .image-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 200px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin: 1.5rem 0;
+        }
+
+        .emergency-info {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .emergency-info h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .emergency-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .health-section {
+                padding: 1.5rem;
+            }
+            
+            .emergency-number {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+     <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="home.html" class="nav-logo">
+                <span>Svāsthya</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+               
+                <li><a href="hospital.html">Hospitals</a></li>
+                <li><a href="healthinfo.html">Health Info</a></li>
+                <li><a href="donations.html">Donation</a></li>
+            </ul>
+
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="health-container">
+        <div class="health-section">
+            <h2>Hygiene: The First Step to Good Health</h2>
+            <p>Proper hygiene is the cornerstone of a healthy life. Regularly washing your hands, bathing, and maintaining cleanliness prevents the spread of germs and reduces the risk of diseases.</p>
+            
+            <ul>
+                <li>Wash your hands with soap before eating and after using the restroom</li>
+                <li>Keep your surroundings clean and dispose of waste responsibly</li>
+                <li>Maintain oral hygiene by brushing your teeth twice daily</li>
+                <li>Shower daily and wear clean clothes</li>
+                <li>Keep your nails trimmed and clean</li>
+            </ul>
+            
+            <div class="image-placeholder">
+                Hygiene Best Practices Infographic
+            </div>
+        </div>
+
+        <div class="health-section">
+            <h2>Disease Prevention Tips</h2>
+            <p>Preventing diseases is more cost-effective and easier than treating them. Following some basic steps can significantly reduce your chances of falling ill:</p>
+            
+            <ul>
+                <li>Get vaccinated for common diseases like flu and measles</li>
+                <li>Avoid close contact with sick individuals</li>
+                <li>Boost your immune system with a balanced diet and regular exercise</li>
+                <li>Wash your hands often and avoid touching your face with unwashed hands</li>
+                <li>Practice safe food handling and preparation</li>
+                <li>Get regular health check-ups</li>
+            </ul>
+        </div>
+
+        <div class="health-section">
+            <h2>Nutrition: Feed Your Body Right</h2>
+            <p>Nutrition plays a vital role in maintaining overall health. A well-balanced diet includes a variety of foods to provide essential nutrients:</p>
+            
+            <ul>
+                <li>Eat plenty of fruits and vegetables for vitamins and minerals</li>
+                <li>Include lean proteins like chicken, fish, eggs, and legumes</li>
+                <li>Opt for whole grains like brown rice, quinoa, and oats</li>
+                <li>Drink plenty of water to stay hydrated and avoid sugary drinks</li>
+                <li>Limit processed foods and excessive sugar intake</li>
+                <li>Practice portion control and mindful eating</li>
+            </ul>
+            
+            <div class="image-placeholder">
+                Balanced Diet Pyramid Infographic
+            </div>
+        </div>
+
+        <div class="emergency-info">
+            <h3>Emergency Medical Services</h3>
+            <p>In case of medical emergency, contact immediately:</p>
+            <div class="emergency-number">108</div>
+            <p>National Emergency Number | Available 24/7</p>
+        </div>
+
+        <div class="health-section">
+            <h2>Mental Health Awareness</h2>
+            <p>Mental health is as important as physical health. Take care of your mental well-being:</p>
+            
+            <ul>
+                <li>Practice stress management techniques like meditation</li>
+                <li>Maintain social connections with friends and family</li>
+                <li>Get adequate sleep (7-9 hours per night)</li>
+                <li>Seek professional help when needed</li>
+                <li>Take breaks and practice self-care regularly</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Svāsthya Hospital Service. All rights reserved.</p>
+    </footer>
+
+    <script src="nav.js"></script>
+</body>
+</html>
